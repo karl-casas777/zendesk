@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <style>
+        table {
+          width: 50%;
+        }
+        td {
+          width: 33.33%;
+          position: relative;
+        }
+        td:after {
+          content: '';
+          display: block;
+          margin-top: 100%;
+        }
+        td .content {
+          text-align: center;
+          line-height: 200px;
+          font-size: 100px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(128, 128, 128, 0.33);
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div>
+        <h3>O first turn</h3>
+    </div>
+    <table border="2">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="js/tictactoe.js"></script>
+{% endblock %}
